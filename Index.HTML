@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mess Meal Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="user-id" placeholder="Customer ID / Admin Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Customer Dashboard -->
+    <div id="customer-dashboard" style="display:none;">
+        <h2>Customer Dashboard</h2>
+        <p>Welcome, <span id="customer-name"></span>!</p>
+
+        <h3>Cancel Meal</h3>
+        <form id="cancel-meal-form">
+            <input type="date" id="cancel-date" required><br>
+            <button type="submit">Cancel Meal</button>
+        </form>
+
+        <h3>Your Cancellation History</h3>
+        <ul id="cancellation-history">
+            <!-- History will appear here -->
+        </ul>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" style="display:none;">
+        <h2>Admin Dashboard</h2>
+        <h3>Meal Preparation Summary</h3>
+        <p id="meal-summary">Loading...</p>
+        <button onclick="downloadPDF()">Download PDF Summary</button>
+
+        <h3>Manage Customers</h3>
+        <ul id="customer-list">
+            <!-- Customer list will appear here -->
+        </ul>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
